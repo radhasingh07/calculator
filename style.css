@@ -1,0 +1,326 @@
+/* ===========================
+Reset
+=========================== */
+
+*{
+
+margin:0;
+
+padding:0;
+
+box-sizing:border-box;
+
+font-family:'Poppins',sans-serif;
+
+}
+
+/* ===========================
+Body
+=========================== */
+
+body{
+
+min-height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+background:linear-gradient(
+135deg,
+#0f172a,
+#2563eb,
+#38bdf8,
+#7dd3fc);
+
+overflow:hidden;
+
+}
+
+/* ===========================
+Animated Background
+=========================== */
+
+.background{
+
+position:fixed;
+
+inset:0;
+
+background:
+radial-gradient(circle at 20% 20%,rgba(255,255,255,.12),transparent 30%),
+radial-gradient(circle at 80% 40%,rgba(255,255,255,.10),transparent 30%),
+radial-gradient(circle at 50% 80%,rgba(255,255,255,.08),transparent 35%);
+
+animation:move 15s infinite alternate;
+
+z-index:-1;
+
+}
+
+@keyframes move{
+
+0%{
+
+transform:scale(1);
+
+}
+
+100%{
+
+transform:scale(1.15);
+
+}
+
+}
+
+/* ===========================
+Calculator
+=========================== */
+
+.calculator{
+
+width:380px;
+
+max-width:95%;
+
+padding:30px;
+
+background:rgba(255,255,255,.12);
+
+backdrop-filter:blur(20px);
+
+border:1px solid rgba(255,255,255,.2);
+
+border-radius:25px;
+
+box-shadow:0 20px 45px rgba(0,0,0,.25);
+
+}
+
+/* ===========================
+Heading
+=========================== */
+
+.calculator h1{
+
+text-align:center;
+
+color:#ffffff;
+
+margin-bottom:20px;
+
+font-size:32px;
+
+}
+
+/* ===========================
+Display
+=========================== */
+
+#display{
+
+width:100%;
+
+height:70px;
+
+padding:15px;
+
+border:none;
+
+outline:none;
+
+border-radius:15px;
+
+background:rgba(255,255,255,.2);
+
+color:#ffffff;
+
+font-size:30px;
+
+font-weight:600;
+
+text-align:right;
+
+margin-bottom:20px;
+
+}
+
+#display::placeholder{
+
+color:#dbeafe;
+
+}
+/* ===========================
+Buttons Grid
+=========================== */
+
+.buttons{
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:15px;
+
+}
+
+/* ===========================
+All Buttons
+=========================== */
+
+.buttons button{
+
+height:70px;
+
+border:none;
+
+border-radius:15px;
+
+font-size:24px;
+
+font-weight:600;
+
+cursor:pointer;
+
+transition:.25s;
+
+background:rgba(255,255,255,.18);
+
+color:#ffffff;
+
+box-shadow:0 8px 15px rgba(0,0,0,.15);
+
+}
+
+/* ===========================
+Hover
+=========================== */
+
+.buttons button:hover{
+
+transform:translateY(-3px);
+
+background:rgba(255,255,255,.28);
+
+}
+
+/* ===========================
+Click
+=========================== */
+
+.buttons button:active{
+
+transform:scale(.95);
+
+}
+
+/* ===========================
+Operator Buttons
+=========================== */
+
+.operator{
+
+background:#2563eb !important;
+
+}
+
+.operator:hover{
+
+background:#1d4ed8 !important;
+
+}
+
+/* ===========================
+Equal Button
+=========================== */
+
+.equal{
+
+grid-column:span 2;
+
+background:#22c55e !important;
+
+}
+
+.equal:hover{
+
+background:#16a34a !important;
+
+}
+
+/* ===========================
+Clear Button
+=========================== */
+
+.clear{
+
+background:#ef4444 !important;
+
+}
+
+.clear:hover{
+
+background:#dc2626 !important;
+
+}
+
+/* ===========================
+Delete Button
+=========================== */
+
+.delete{
+
+background:#f59e0b !important;
+
+}
+
+.delete:hover{
+
+background:#d97706 !important;
+
+}
+
+/* ===========================
+Responsive
+=========================== */
+
+@media(max-width:480px){
+
+.calculator{
+
+padding:20px;
+
+}
+
+.calculator h1{
+
+font-size:26px;
+
+}
+
+#display{
+
+height:60px;
+
+font-size:24px;
+
+}
+
+.buttons{
+
+gap:10px;
+
+}
+
+.buttons button{
+
+height:60px;
+
+font-size:20px;
+
+}
+
+}
