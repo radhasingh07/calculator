@@ -22,6 +22,9 @@ A responsive Calculator built using HTML, CSS, and JavaScript. This web applicat
 
 ```
 Calculator/
+├── home.png
+├── input.png
+|  output.png
 │── index.html
 │── style.css
 │── script.js
